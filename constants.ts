@@ -12,7 +12,7 @@ export const COLORS = {
 export const BRAND = {
   name: "모두의 문제 연구소",
   engName: "Everyone's Problem Lab",
-  affiliation: "한양대학교 ERICA 수리데이터사이언스 연구실 창업 사회적기업"
+  affiliation: "한양대학교 ERICA 수리데이터사이언스 데이터 분석 학회"
 };
 
 export const MOCK_STORIES: Story[] = [

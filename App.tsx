@@ -1,25 +1,65 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from './components/Layout';
 import StorySection from './components/StorySection';
 import GapMap from './components/GapMap';
 import ProposalGenerator from './components/ProposalGenerator';
+import StoryPage from './components/StoryPage';
 import { COLORS, BRAND, MOJ_STATS } from './constants';
 
 const App: React.FC = () => {
+  const [view, setView] = useState<'home' | 'stories'>('home');
+
+  if (view === 'stories') {
+    return <StoryPage onBack={() => setView('home')} />;
+  }
+
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative pt-24 pb-36 overflow-hidden bg-white">
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         <div className="max-w-7xl mx-auto px-4 relative">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-green-700 text-xs font-bold mb-8 border border-green-100">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            {BRAND.affiliation}
+          
+          {/* Top Badge Area */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 text-green-700 text-xs font-bold border border-green-100 self-start shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              {BRAND.affiliation}
+            </div>
+
+            {/* Enhanced Instagram Button */}
+            <a 
+              href="https://www.instagram.com/moyeon_lab/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-100 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 self-start sm:self-auto overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="relative w-8 h-8 rounded-lg bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
+                <div className="w-full h-full bg-white rounded-[6px] flex items-center justify-center">
+                   <svg className="w-4 h-4 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                   </svg>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider leading-none mb-0.5">Official SNS</span>
+                <span className="text-sm font-black text-slate-800 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-colors">
+                  @모두의 문제 연구소
+                </span>
+              </div>
+              <svg className="w-4 h-4 text-slate-300 group-hover:text-pink-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
+
           <div className="max-w-4xl">
             <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[1.05] mb-10 tracking-tighter">
               데이터의<br /> 시선으로 <br />
@@ -30,12 +70,12 @@ const App: React.FC = () => {
               기존 시스템이 놓친 소외 계층을 규명하고, 그들에게 닿을 수 있는 <span className="text-slate-900 font-bold underline decoration-green-500 underline-offset-4"><br />가장 실효성 있는 솔루션</span>을 연구합니다.
             </p>
             <div className="flex flex-wrap gap-5">
-              <a 
-                href="#stories" 
+              <button 
+                onClick={() => setView('stories')} 
                 className="px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:bg-slate-800 transition-all shadow-2xl shadow-slate-900/30 text-lg active:scale-95"
               >
                 연구 사례 보기
-              </a>
+              </button>
               <a 
                 href="#data" 
                 className="px-10 py-5 bg-white border-2 border-slate-200 text-slate-900 font-black rounded-2xl hover:bg-slate-50 transition-all text-lg active:scale-95"
