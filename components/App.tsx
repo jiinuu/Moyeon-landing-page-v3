@@ -22,12 +22,12 @@ const App: React.FC = () => {
           </div>
           <div className="max-w-4xl">
             <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[1.05] mb-10 tracking-tighter">
-              데이터는 <br />
-              <span className="text-green-600">누구도 소외되지<br />않아야 함</span>을 증명합니다.
+              데이터의<br /> 시선으로 <br />
+              <span className="text-green-600">세상이 놓친 질문을<br /></span>다시 던집니다.
             </h1>
             <p className="text-xl md:text-2xl text-slate-500 mb-12 leading-relaxed max-w-2xl font-medium">
-              모두의 문제 연구소는 수리데이터사이언스를 통해 <br className="hidden md:block" />
-              법무부 통계 속 숨겨진 <span className="text-slate-900 font-bold underline decoration-green-500 underline-offset-4">복지 사각지대</span>를 찾아내고 정책으로 연결합니다.
+              모두의 문제 연구소는 정밀한 데이터 분석을 통해 <br className="hidden md:block" />
+              기존 시스템이 놓친 소외 계층을 규명하고, 그들에게 닿을 수 있는 <span className="text-slate-900 font-bold underline decoration-green-500 underline-offset-4"><br />가장 실효성 있는 솔루션</span>을 연구합니다.
             </p>
             <div className="flex flex-wrap gap-5">
               <a 
@@ -97,7 +97,7 @@ const App: React.FC = () => {
                 <div className="w-16 h-16 rounded-2xl bg-white text-slate-900 flex items-center justify-center text-3xl mb-8 shadow-xl shadow-white/10">🏛️</div>
                 <h3 className="text-2xl font-black mb-4">03. Policy Action</h3>
                 <p className="text-slate-400 leading-relaxed font-medium">
-                  공무원이 즉시 예산을 확보할 수 있는 논리적 근거가 담긴 '정책 치트키' 제안서를 자동 생성하여 전달합니다.
+                  정책 제안자가 바로 사용 가능한 논리적 근거가 담긴 '정책 치트키' 제안서를 자동 생성하여 전달합니다.
                 </p>
              </div>
           </div>

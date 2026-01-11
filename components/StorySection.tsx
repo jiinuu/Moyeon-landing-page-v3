@@ -8,7 +8,7 @@ const StorySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl font-black text-slate-900 mb-2">Trigger: 감성(Story)으로 문을 열다</h2>
+            <h2 className="text-3xl font-black text-slate-900 mb-2">Trigger: Story으로 문을 열다</h2>
             <p className="text-slate-500">인스타그램과 숏츠에서 시작된 한 사람의 이야기가 사회를 바꿉니다.</p>
           </div>
           <div className="mt-4 md:mt-0">

@@ -22,7 +22,7 @@ export const MOCK_STORIES: Story[] = [
     excerpt: '법무부 통계상 F-6 비자 소지자는 18만 명을 넘었습니다. 하지만 이들 중 53.7%가 수도권에 집중되면서, 지방 거주자들의 의료·복지 접근성은 데이터상 심각한 결핍을 보입니다.',
     content: '마리아 씨는 화성시 외곽에 거주하는 결혼이민자입니다. 통계월보에 따르면 화성시는 외국인 밀집도가 높지만, 대중교통 데이터와 결합했을 때 마리아 씨의 집에서 복지센터까지는 도보와 버스로 84분이 소요됩니다.',
     author: '모두의 문제 연구소 데이터 팀',
-    imageUrl: 'https://images.unsplash.com/photo-1573497620053-ea5310f94a17?auto=format&fit=crop&q=80&w=800',
+    imageUrl: 'https://github.com/jiinuu/jiinuu.github.io/blob/6c703d1744c6cd2f18b9a09a75712ed60f23f53a/402337326_657879323001534_477076322436472498_n.jpg?raw=true',
     region: '수도권 외곽',
     tags: ['F-6 결혼이민', '수도권집중', '데이터결핍']
   },
